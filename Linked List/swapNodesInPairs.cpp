@@ -7,7 +7,7 @@
       ListNode(int x, ListNode *next) : val(x), next(next) {}
   };
 
-class Solution {
+class Solution {     ///GREAT QUESTION COVERS ALL ASPECTS OF LINKED LIST
     public:
         ListNode* swapPairs(ListNode* head) {
             if (head == NULL || head->next == NULL) return head;
@@ -26,7 +26,7 @@ class Solution {
                 prev->next = front;
     
                 // Move `prev` and `curr` two steps forward
-                prev = curr;
+                prev = curr; /*MOST IMPORTANT PART IN THE CODE*/
                 curr = curr->next;
             }
     
