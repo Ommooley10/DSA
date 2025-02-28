@@ -19,10 +19,10 @@ class Solution {
     
     
             while(curr != NULL){
-                ListNode* nxt = curr->next;
+                ListNode* front = curr->next;
                 curr->next = prev;
                 prev = curr;
-                curr = nxt;
+                curr = front;
             }
             return prev;
         }

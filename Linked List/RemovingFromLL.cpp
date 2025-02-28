@@ -64,17 +64,17 @@ Node* removeKthElement(Node* head, int k){
         free(temp);
         return head;
     }else{
-         int count = 0;
+         int count = 1;
          Node* temp = head;
          Node* prev = NULL;
 
          while(temp != NULL){
-            count++;
             if(count == k){
                 prev->next = prev->next->next;
                 free(temp);
                 break;
             }
+            count++;
             prev = temp;
             temp = temp->next;
          }
@@ -82,10 +82,31 @@ Node* removeKthElement(Node* head, int k){
     }
 }
 
-Node* removeGivenNode(Node* node){
-    if(node->next == NULL) return NULL;
-
-    node->data = node->next->data;
-    node->next = node->next->next;
+void printList(Node* head) {
+    Node* temp = head;
+    while (temp != NULL) {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+    cout << endl;
 }
 
+int main() {
+    // Creating a linked list with 5 elements
+    Node* head = new Node(1);
+    head->next = new Node(2);
+    head->next->next = new Node(3);
+    head->next->next->next = new Node(4);
+    head->next->next->next->next = new Node(5);
+
+    cout << "Original list: ";
+    printList(head);
+
+    // Removing the 3rd element
+    head = removeKthElement(head, 3);
+
+    cout << "List after removing 3rd element: ";
+    printList(head);
+
+    return 0;
+}

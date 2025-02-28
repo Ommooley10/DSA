@@ -6,3 +6,10 @@ The following patterns are important:
 3. Changing the links of the two linked lists.
 4. Keep track of the position of pointer while incrementing it, sometimes the count is to be started from 1 instead of 0.
 5. Some questions require keeping the track of the previous node, specially while deleting a particular node from the LL.
+6. ALWAYS INITIALIZE THE COUNT VARIABLE TO 1 COZ LINKED LIST IS 1 BASED INDEXING.
+        preferably to this: 
+        int count = 1;
+        for(count < pos){
+            temp = temp->next;
+            count++;
+        }
