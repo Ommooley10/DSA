@@ -5,3 +5,4 @@ The following patterns are important:
 2. Creating a dummy linked list with -1 value i.e ListNode* dummyNode = new ListNode(-1);
 3. Changing the links of the two linked lists.
 4. Keep track of the position of pointer while incrementing it, sometimes the count is to be started from 1 instead of 0.
+5. Some questions require keeping the track of the previous node, specially while deleting a particular node from the LL.
