@@ -22,7 +22,7 @@ class Solution {
             
             ListNode* prev = dummy;
             
-            for(int i = 1; i<left; i++) {
+            for(int i = 1; i<left; i++) { //can also follow this method instead of using while loop for counting
                 prev = prev->next;
             }
             
