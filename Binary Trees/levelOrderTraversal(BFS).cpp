@@ -10,6 +10,11 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
+/*NOTE:
+Use a regular binary tree BFS, but the trick is to keep track of the levels, so we need to have a list of all nodes at each level.
+
+Hint: We can do this by adding a simple loop that run as much as their is nodes in the queue*/
+
 
 /*1] RETURNING SINGLE ARRAY OF ELEMENTS */  //eg ans={1,2,3,4,5}
 class Solution {
