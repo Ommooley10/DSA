@@ -51,9 +51,9 @@ class Solution {
         
                 while(!dq.empty()){
                     vector<int> temp;
-                    int levelNo = dq.size();
+                    int n = dq.size();
         
-                    for(int i=0;i<levelNo;i++){  //USE OF A FOR LOOP FROM 0 TILL THE LEVEL NUMBER IN ORDER TO INSERT ELEMENT IN THE TEMP ARRAY WHICH LATER WILL BE INSERTED TO THE FINAL RESULT ARRAY
+                    for(int i=0;i<n;i++){  //USE OF A FOR LOOP FROM 0 TILL THE LEVEL NUMBER IN ORDER TO INSERT ELEMENT IN THE TEMP ARRAY WHICH LATER WILL BE INSERTED TO THE FINAL RESULT ARRAY
                         TreeNode* curr = dq.front();
                         dq.pop_front();
                         temp.push_back(curr->val);
