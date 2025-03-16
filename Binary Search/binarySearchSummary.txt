@@ -1,0 +1,5 @@
+Apply the binary search in following cases:
+1. jevha pan minimum set madhun maximum kevha maximum set madhun minimum vicharla asel tevha look for binary search option.
+2. array is sorted
+3. when minimum or maximum element is asked among a given list of elements
+4. binary search is hard topic, you must be aware when to use it, so practice more problems
