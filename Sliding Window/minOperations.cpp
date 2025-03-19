@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// PROBLEM HAS 80% ACCEPTANCE RATE
+
 /*you are given a binary array nums.
 You can do the following operation on the array any number of times (possibly zero):
 Choose any 3 consecutive elements from the array and flip all of them.
@@ -24,7 +26,7 @@ Explanation:
 It is impossible to make all elements equal to 1.*/
 
 //1] Solution may not be a typical sliding window problem but can be solved using that too
-// Solution is as easy as it gets, just a care to be taken is that don't overthink about the problem you know, just write the code with the flow!!!
+// Solution is as easy as it gets, just a care to be taken is that don't overthink about the problem, just write the code with the flow!!!
 class Solution {
     public:
     
@@ -33,7 +35,7 @@ class Solution {
             else nums[i] = 0;
         }
     
-        int minOperations(vector<int>& nums) {
+        int minOperations(vector<int>& nums) {   //PROBLEM HAS 80% ACCEPTANCE RATE 
             int n = nums.size();
             int count = 0;
             for(int i=0;i<=n-3;i++){
