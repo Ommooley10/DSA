@@ -24,6 +24,7 @@ Explanation:
 It is impossible to make all elements equal to 1.*/
 
 //1] Solution may not be a typical sliding window problem but can be solved using that too
+// Solution is as easy as it gets, just a care to be taken is that don't overthink about the problem you know, just write the code with the flow!!!
 class Solution {
     public:
     
