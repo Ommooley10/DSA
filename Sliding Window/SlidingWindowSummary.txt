@@ -1,0 +1,24 @@
+Look for words like "longest subarray", "no of subarray with sum <= k", "no of subarray with sum == k"
+"no of consecutive elements" "flipping the digits"
+
+TEMPLATE: DO SHRINK(If required) CHECK/UPDATE
+int left = 0;
+int right = 0;
+ while(right < nums.size()){
+                if(nums[right] == 0){      //Check condition (DO)
+                    zeroes++;
+                }
+    
+                while(zeroes > k){    //Shrink the window (SHRINK)
+                    if(nums[left] == 0){
+                        zeroes = zeroes - 1;
+                        left = left + 1;
+                    }else{
+                        left = left + 1;
+                    }
+                }
+                maxLen = max(maxLen, right-left+1);  //analyze the max length (CHECK/UPDATE)
+                right = right + 1;  //right pointer is always moving (KEEP THE RIGHT POINTER MOVING)
+            }
+            return maxLen;
+        }
