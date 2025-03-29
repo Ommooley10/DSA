@@ -1,6 +1,8 @@
-Look for words like "longest subarray", "no of subarray with sum <= k", "no of subarray with sum == k"
-"no of consecutive elements" "flipping the digits"
+1. Look for words like "longest subarray", "no of subarray with sum <= k", "no of subarray with sum == k"
+"no of CONSECUTIVE elements" "flipping the digits"
+2. Counting in substring == Sliding Window problem
 
+1. TEMPLATE OF VARIABLE SIZED WINDOW
 TEMPLATE: DO SHRINK(If required) CHECK/UPDATE
 int left = 0;
 int right = 0;
@@ -22,3 +24,28 @@ int right = 0;
             }
             return maxLen;
         }
+
+2. TEMPLATE OF FIXED SIZED WINDOW
+class Solution {
+public:
+    int maxVowels(string s, int k) {
+        int left = 0;
+        int right = 0;
+        int maxVowels = INT_MIN;
+        int vowels = 0;
+        int count = 0;
+
+        while(right < s.size()){
+            if(s[right] == 'a' || s[right] == 'e' || s[right] == 'i' || s[right] == 'o' || s[right] == 'u') vowels++;
+            count = count+1;
+            while(count > k){
+                if(s[left] == 'a' || s[left] == 'e' || s[left] == 'i' || s[left] == 'o' || s[left] == 'u') vowels--;
+                count = count-1;
+                left = left + 1;
+            }
+            if(count == k) maxVowels = max(maxVowels,vowels);
+            right = right+1;
+        }
+        return maxVowels;
+    }
+};
