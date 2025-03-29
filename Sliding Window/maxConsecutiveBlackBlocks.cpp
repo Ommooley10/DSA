@@ -47,3 +47,28 @@ class Solution {
         }
     };
 
+//2] Use sliding window with khandani template: (the word "consecutive" is used so this gives and ides of using sliding window)
+class Solution {
+    public:
+        int minimumRecolors(string blocks, int k) {
+            int left = 0;
+            int right = 0;
+            int minWhites = INT_MAX;
+            int whites = 0;
+            int count = 0;
+    
+            while(right < blocks.size()){
+                if(blocks[right] == 'W') whites++;
+                count = count+1;
+                while(count > k){
+                    if(blocks[left] == 'W') whites--;
+                    count = count-1;
+                    left = left + 1;
+                }
+                if(count == k) minWhites = min(minWhites,whites);
+                right = right+1;
+            }
+            return minWhites;
+        }
+    };
+
