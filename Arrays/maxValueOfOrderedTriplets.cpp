@@ -23,6 +23,7 @@ Input: nums = [1,2,3]
 Output: 0
 Explanation: The only ordered triplet of indices (0, 1, 2) has a negative value of (nums[0] - nums[1]) * nums[2] = -3. Hence, the answer would be 0.*/
 
+//1] BRUTE FORCE:
 class Solution {
     public:
         long long maximumTripletValue(vector<int>& nums) {
@@ -48,3 +49,30 @@ class Solution {
             return maxAns;
         }
     };
+
+//2] OPTIMAL CODE:
+class Solution {
+    public:
+        long long maximumTripletValue(vector<int>& nums) {
+            int n = nums.size();
+            long long maxAns = 0;
+    
+            // Track the maximum value of (nums[i] - nums[j]) for i < j
+            long long maxDiff = LLONG_MIN;
+    
+            // Iterate through the array, considering each j as the middle element
+            for (int j = 1; j < n - 1; j++) {
+                // Update maxDiff for the current j (i < j)
+                maxDiff = max(maxDiff, (long long)nums[j - 1] - nums[j]);
+                
+                // Now calculate the value for each k > j
+                for (int k = j + 1; k < n; k++) {
+                    long long ans = maxDiff * nums[k];
+                    maxAns = max(maxAns, ans);
+                }
+            }
+    
+            return maxAns;
+        }
+    };
+    
