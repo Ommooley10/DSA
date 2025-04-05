@@ -25,6 +25,9 @@ For the next two customers in order, we collect a $10 bill and give back a $5 bi
 For the last customer, we can not give the change of $15 back because we only have two $10 bills.
 Since not every customer received the correct change, the answer is false.*/
 
+//NOTE:
+/*When receiving a $20: Prefer to give one $10 and one $5 (to conserve $5 bills).If not possible, give three $5 bills.*/
+
 class Solution {
     public:
         bool lemonadeChange(vector<int>& bills) {
@@ -37,7 +40,8 @@ class Solution {
                     if (count5 == 0) return false;
                     count5--;
                     count10++;
-                } else if (money == 20) {
+
+                } else if (money == 20) {  /*When receiving a $20: Prefer to give one $10 and one $5 (to conserve $5 bills).If not possible, give three $5 bills.*/
                     if (count10 > 0 && count5 > 0) {
                         count10--;
                         count5--;
