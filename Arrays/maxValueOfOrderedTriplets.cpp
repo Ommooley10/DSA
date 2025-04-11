@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <climits>
+#include <algorithm>
 using namespace std;
 
 /*You are given a 0-indexed integer array nums.
