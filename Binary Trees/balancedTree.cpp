@@ -12,22 +12,19 @@ struct TreeNode {
 
 class Solution {
 public:
-    bool isBalanced(TreeNode* root) {
-        return check(root) != -1;  // return true if balanced
+    int height(TreeNode* root) {
+        if (!root) return 0;
+        return 1 + max(height(root->left), height(root->right));
     }
 
-private:
-    int check(TreeNode* root) {
-        if (root == nullptr) return 0;
+    bool isBalanced(TreeNode* root) {
+        if (!root) return true;
 
-        int LeftHeight = check(root->left);
-        if (LeftHeight == -1) return -1;
+        int leftHeight = height(root->left);
+        int rightHeight = height(root->right);
 
-        int RightHeight = check(root->right);
-        if (RightHeight == -1) return -1;
+        if (abs(leftHeight - rightHeight) > 1) return false;
 
-        if (abs(LeftHeight - RightHeight) > 1) return -1;
-
-        return 1 + max(LeftHeight, RightHeight);  // return height if balanced
+        return isBalanced(root->left) && isBalanced(root->right);
     }
 };
