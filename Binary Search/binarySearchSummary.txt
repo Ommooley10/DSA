@@ -3,3 +3,4 @@ Apply the binary search in following cases:
 2. array is sorted
 3. when minimum or maximum element is asked among a given list of elements
 4. binary search is hard topic, you must be aware when to use it, so practice more problems
+5. binary search on the answer, look for question containing phrases "minimum of maximum" and "maximum or minimum"
