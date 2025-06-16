@@ -11,19 +11,7 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-// LEETCODE: 662
-
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
+// LEETCODE: 662   USE LEVEL ORDER TRAVERSAL WHEREVER REQUIRED (usually containing words like width or breadth)
 class Solution {
 public:
     int widthOfBinaryTree(TreeNode* root) {
