@@ -55,3 +55,27 @@ public:
         return ans;
     }
 };
+
+
+//Using DFS (Preorder traversal): each level requires one value to be entered in the ans vector. for eg if there are total 3 levels in a binary tree then the size of ans vector i.e ans.size() = 3;
+class Solution {
+public:
+    void preorder(TreeNode* root, int level, vector<int>& ans){
+        if(root == NULL) return;
+
+        if(ans.size() < level){
+            ans.push_back(root->val);
+        }
+
+        preorder(root->right, level+1, ans);
+        preorder(root->left, level+1, ans);
+    }
+
+    vector<int> rightSideView(TreeNode* root) {
+        vector<int> ans;
+
+        preorder(root,1,ans);
+
+        return ans;
+    }
+};
