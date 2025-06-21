@@ -38,3 +38,34 @@ The root-to-leaf path 4->9->1 represents the number 491.
 The root-to-leaf path 4->0 represents the number 40.
 Therefore, sum = 495 + 491 + 40 = 1026.*/
 
+class Solution {
+public:
+
+    void getPath(TreeNode* root, string path, vector<string>& ans){
+        if(root->left == NULL && root->right == NULL){
+            ans.push_back(path);
+        }
+
+        if(root->left != NULL){
+            getPath(root->left, path + to_string(root->left->val), ans);
+        }
+
+        if(root->right != NULL){
+            getPath(root->right, path + to_string(root->right->val), ans);
+        }
+    }
+
+    int sumNumbers(TreeNode* root) {
+        if(root == NULL) return 0;
+
+        vector<string> ans;
+        int sum = 0;
+        string path = to_string(root->val);
+        getPath(root, path, ans);
+
+        for(auto str: ans){
+            sum += stoi(str);
+        }
+        return sum;
+    }
+};
