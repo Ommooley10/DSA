@@ -16,7 +16,7 @@ struct TreeNode {
 1) we have to basically print the nodes at k level from the target node. (so this gives the intuition that BFS is needed).
 
 2) But BFS can only travel downwards and not from the node to the parent node, so here we need to have a record of a node and
-its parent node as well, so therefore an "inorder traversal" and a hashmap would do the job.
+its parent node as well, so therefore an "inorder traversal" or "preorder traversal" and a hashmap would do the job.
 
 3) while applying the BFS take care that apart from the curr->left and curr->right, we need to check the parent of curr as
 well and push that to the queue, also keeping in mind that the nodes visited should not be inserted into the queue once again
@@ -43,14 +43,11 @@ public:
         if (root == NULL)
             return;
 
-        if (root->left != NULL) {
-            parent[root->left] = root;
-        }
+        if (root->left != NULL) parent[root->left] = root;
+        
+        if (root->right != NULL) parent[root->right] = root;
+        
         inorder(root->left);
-
-        if (root->right != NULL) {
-            parent[root->right] = root;
-        }
         inorder(root->right);
     }
 
