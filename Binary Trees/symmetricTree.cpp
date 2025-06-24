@@ -32,11 +32,16 @@ Output: false*/
 
 class Solution {
 public:
-    bool check(TreeNode* leftRoot, TreeNode* rightRoot){
-        if(leftRoot == NULL && rightRoot == NULL) return true;
-        if(leftRoot == NULL || rightRoot == NULL) return false;
+    bool check(TreeNode* L, TreeNode* R){
 
-        if(leftRoot->val == rightRoot->val && check(leftRoot->right, rightRoot->left) && check(leftRoot->left, rightRoot->right)){
+        // cond 1: If both are NULL
+        if(L == NULL && R == NULL) return true;
+
+        // cond 2: If one of them is NULL and other is NOT NULL
+        if(L == NULL || R == NULL) return false;
+
+        // cond 3; If both are not NULL
+        if(L->val == R->val && check(L->right, R->left) && check(L->left, R->right)){
             return true;
         }
         return false;
