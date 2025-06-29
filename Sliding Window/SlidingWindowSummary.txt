@@ -1,6 +1,8 @@
 1. Look for words like "longest subarray", "no of subarray with sum <= k", "no of subarray with sum == k"
 "no of CONSECUTIVE elements" "flipping the digits"
 2. Counting in substring == Sliding Window problem
+3. in "SUBESEQUENCE" question, you cannot apply sliding window technique, its just pure mind skill. HOWEVER,
+CONSIDER SORTING THE ARRAY FIRST
 
 1. TEMPLATE OF VARIABLE SIZED WINDOW
 TEMPLATE: DO SHRINK(If required) CHECK/UPDATE
