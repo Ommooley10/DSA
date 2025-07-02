@@ -46,7 +46,7 @@ public:
         idx++;
 
         TreeNode* root = new TreeNode(rootVal);
-        root->left = solve(preorder, inorder, start, rootPos-1, idx);
+        root->left = solve(preorder, inorder, start, rootPos-1, idx); //generating the left and right subtree
         root->right = solve(preorder, inorder, rootPos+1, end, idx);
 
         return root;
