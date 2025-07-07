@@ -1,0 +1,49 @@
+In binary trees, first it is important to understand that MOST of the binary tree questions can solved using 
+either BFS or DFS (BFS -> level order traversal).
+
+                    ** Binary tree problems with recursion (DFS) **
+1. Knowing how recursion works is important.
+2. While solving a binary tree problem using recursion, just look at the overall scenario and not the depth
+as the more you seek depth the more confusion it will create.
+3. Just figure out the edge case and build a story around it, and convert that story into code.
+4. no standard template exists for recursion of DFS questions its pure logic and practice, however some notable types
+of questions include:
+    i.  LCA problems (trust in recursion)
+    ii. flattening a binary tree to linked list
+    iii.balanced tree/ symmetric trees
+    iv. path sum 2 (involves backtracking as well)
+    v.  root to leaf path
+    vi. BT from inorder & preorder / inorder and postorder
+    vii. Delete node in BST (V IMP) (doesn't involve recursion)
+
+NOTE: we cannot form a unique binary tree from preorder and postorder of a given tree.
+
+
+
+                            ** Binary tree problems with recursion (DFS) **
+
+1. Uses queue (normal queue or deque) for traversal of all nodes at a given level.
+2. Notable problems:
+    i. ZigZag traversal
+    ii. Deepest Leaves sum
+    iii. Max width of binary tree (IMP)
+    iv. right side view
+    v.  Kth smallest element
+    vi. Two sum BST
+
+TEMPLATE (subject to change) -> refer "levelOrderTraversal.cpp"
+
+NOTE: Most of the above problems can be solved using both DFS and BFS
+
+
+                                **For Binary Search Trees (BST)**
+
+DEF:  The subtree on the left of a node should contain all the values LESS than the node and subtree on the
+right should contain all the values greater than the node.
+
+The inorder traversal of a BST is always sorted.
+
+For questions like "validate a BST" and "Generate a BST from preorder" use the concept of upper and lower bounds
+or min and max value range.
+
+The method to find LCA in BST is same as in the BT.
