@@ -1,6 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/*How to build intuition that this ques will use stack?
+-> If you look closely, this problem is very much similar to "Valid parenthesis" problem where we have to remove 
+the unbalanced ones by comparing with valid ones in the stack, if pop from stack untill a valid one is found, 
+same logic here.
+*/
+
 /*NOTE: By finding sum of the two adjacent asteroids we can conclude which one will be destroyed and which one will carry on
 1. if sum == 0 both will cancel out each other, pop from stk
 2. if sum > 0 the larger one will live, no changes in stack
