@@ -85,5 +85,3 @@ class Solution {
             return maxLen;
         }
     };
-
-//3] OPTIMAL SOLUTION (USING SLIDING WINDOW):
