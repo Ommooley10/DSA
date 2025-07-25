@@ -4,6 +4,8 @@
 3. in "SUBESEQUENCE" question, you cannot apply sliding window technique, its just pure mind skill. HOWEVER,
 CONSIDER SORTING THE ARRAY FIRST
 
+4.IMP:Sliding window will not be useful when the array has "negative" elements in it, Use "Kadane's Algo" instead
+
 1. TEMPLATE OF VARIABLE SIZED WINDOW
 TEMPLATE: DO SHRINK(If required) CHECK/UPDATE
 int left = 0;
