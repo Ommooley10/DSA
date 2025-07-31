@@ -1,0 +1,16 @@
+For identifying heap problems look for the above things:
+
+1. words like kth smallest, kth largest (basically smallest and largest with an integer k given in question)
+2. if kth smallest is asked then use maxHeap
+3. if kth largest is asked, use minHeap
+
+4. median problems
+5. in problems where sorting is necessary, try figuring out the approach using heap first
+6. where an increasing or decreasing order needs to be maintained
+7. merge sorted lists, merge sorted arrays
+
+
+DECLARATION:
+
+1. minHeap: priority_queue<int, vector<int>, greater<int>> minHeap;
+2. maxHeap: priority_queue<int> maxHeap;
