@@ -4,10 +4,12 @@ For identifying heap problems look for the above things:
 2. if kth smallest is asked then use maxHeap
 3. if kth largest is asked, use minHeap
 
-4. median problems
+4. median problems (VERY IMP)
 5. in problems where sorting is necessary, try figuring out the approach using heap first
 6. where an increasing or decreasing order needs to be maintained
 7. merge sorted lists, merge sorted arrays
+
+8. IMP problem: using two heaps (minHeap and maxHeap) for finding medians (refer "findMedianFromDataStream.cpp")
 
 
 DECLARATION:
