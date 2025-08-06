@@ -40,11 +40,9 @@ public:
         int right = 0;
         int n = fruits.size();
         int maxCount = 0;
-        int count = 0;
 
         while(right < n){
             mpp[fruits[right]]++;
-            count += 1;
 
             while(mpp.size() > 2){
                 mpp[fruits[left]]--;
