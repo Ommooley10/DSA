@@ -54,6 +54,7 @@ public:
                 } else {  //if there is a range between ro and column
                     vector<int> temp;
 
+                    //VERY IMPORTANT STEP, HERE WE ARE MAPPING 2D ARRAY INTO A 1D ONE JUST LIKE DONE ABOVE FOR 1D ARRAYS
                     for (int col = 0; col < n; col++) {
                         int aggregate = 1;
                         for (int row = SR; row <= ER; row++) {
