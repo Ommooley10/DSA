@@ -38,7 +38,7 @@ public:
         //SR = startRow, ER = endRow
         for (int SR = 0; SR < m; SR++) {
             for (int ER = SR; ER < m; ER++) {
-                if (SR == ER) {  //is there is only row
+                if (SR == ER) {  //if there is only row
                     int consec = 0;
                     auto arr = mat[SR];
                     for (int num : arr) {
