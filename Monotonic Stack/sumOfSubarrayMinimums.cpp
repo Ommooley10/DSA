@@ -63,8 +63,10 @@ public:
             }
         }
 
-        //MAIN LOGIC: here we have to just find the index of the next smaller integer to the left of i and the next smaller integer to the right of i.
-        //at last we need to subtract the next smaller integer from left (i.e NSL) from i i.e ls = i - NSL[i], and same with NSR i.e rs = NSR[i] - right;, then we need to multiply these to get the number of subarrays having arr[i] as the smallest element and finally we need to multiply the noOfSubarrayCount with arr[i] to get the count and add it to totalcount
+        /*MAIN LOGIC: here we have to just find the index of the next smaller integer to the left of i and the next smaller integer to the right of i.
+        at last we need to subtract the next smaller integer from left (i.e NSL) from i i.e ls = i - NSL[i], 
+        and same with NSR i.e rs = NSR[i] - right;
+        then we need to multiply these to get the number of subarrays having arr[i] as the smallest element and finally we need to multiply the noOfSubarrayCount with arr[i] to get the count and add it to totalcount*/
         for(int i = 0; i < n; i++){
             int ls = i - NSL[i];
             int rs = NSR[i] - i;
