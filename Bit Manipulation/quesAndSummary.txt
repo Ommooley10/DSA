@@ -1,0 +1,50 @@
+Basics:
+1. 1s and 2s complement
+2. binary to decimal and vice versa
+3. different types of operators : 
+    i. Shift (<< (left shift) , >> (right shift))
+    ii. AND (&)
+    iii. OR (|)
+    iv. XOR (^)
+    v. NOT (~)
+
+5. Left shift operator: n << k = n * pow(2,k)
+6. Right shift operator; n >> k = n / pow(2,k)
+
+
+Basic questions:
+
+1. Swap two numbers
+int a = 5;
+int b = 6;
+    a = a^b;
+    b = a^b;
+    a = a^b;
+
+
+2. Check if the ith bit is set or not 
+int N;
+if(N & (1 << i) != 0){
+    cout << "The bit is set"
+}else{
+    cout << "The bit is not set"
+}
+
+
+3. Set the ith bit (make the value of the ith bit equal to 1)
+int N
+N | (1 << i)  (OR operator is used to set the bit)
+
+
+4. Clear the ith bit (make the value of the ith bit equal to 0)
+int N;
+N & (~(1 << i))   (AND operator is used to clear the bit)
+
+
+5. Toggle the ith bit
+int N 
+N ^ (1 << i)   (XOR operator is used to toggle the bit)
+
+6. Toggle the rightmost set bit
+int N
+N & (N - 1)
