@@ -91,16 +91,6 @@ manner as done in the Add2Numbers I leetcode problem.
 3. After performing the addition insert the result in a new stack called ans stack, and at last build the LL
 by taking element from the stack in order.*/
 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
