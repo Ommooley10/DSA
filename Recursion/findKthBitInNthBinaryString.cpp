@@ -28,6 +28,8 @@ Output: "1"
 Explanation: S4 is "011100110110001".
 The 11th bit is "1".*/
 
+//SOLUTION 1: RECURSIVE APPROACH (little faster)
+
 /*INTUITION:
 Classic recursion problem, do as directed
 1. revinv function -> reverses the string and inverts the bits of the reversed string.
@@ -69,5 +71,38 @@ public:
         string sequence = findSeq(n);
 
         return sequence[k-1];
+    }
+};
+
+
+//SOLUTION 2: NON RECURSIVE APPROACH USING VECTOR TO STORE ALL POSSIBLE STRING TILL 'n'. (little slower)
+class Solution {
+public:
+    vector<string> seq;
+
+    string revinv(string s){
+        reverse(s.begin(), s.end());
+        for (char& c : s) {
+        c = c ^ '0' ^ '1'; 
+        }
+        return s;
+    }
+
+    void findSeq(int n){
+        seq.push_back("0");
+
+        for(int i = 1; i <= n; i++){
+            string last = seq.back();
+
+            string newString = last + '1' + revinv(last);
+            seq.push_back(newString);
+        }
+
+    }
+
+    char findKthBit(int n, int k) {
+        findSeq(n);
+        string ans = seq[n-1];
+        return ans[k-1];
     }
 };
